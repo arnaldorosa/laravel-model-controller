@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Dati da "config/data.php": {{ $home }}</h1>
-<p>This is my paragraph content.</p>
-<button class="btn btn-primary">Cliccami</button>
+<div class="container my-3">
+ <ul>
+    @foreach ($movies as $movie)
+        <li>{{$movie->title}}</li>
+    @endforeach
+ </ul>
+
+</div>
 @endsection
